@@ -1,0 +1,309 @@
+Script started on Sat 13 Nov 2021 08:11:43 PM PST
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+lappend search_path /u/shnebli/Desktop/Karem/problem2/binary
+. /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/dw/syn_ver /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/dw/sim_ver /u/shnebli/Desktop/Karem/problem2/binary
+set target_library /u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db
+/u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db
+set link_library [concat "*" $target_library]
+* /u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db
+link
+Error: Current design is not defined. (UID-4)
+0
+read_file -format sverilog /u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv
+Loading db file '/u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv
+
+Statistics for case statements in always block at line 11 in file
+	'/u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 28 in file
+	'/u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Binary_case line 6 in file
+		'/u/shnebli/Desktop/Karem/problem2/binary/Binary_Case.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/u/shnebli/Desktop/Karem/problem2/binary/Binary_case.db:Binary_case'
+Loaded 1 design.
+Current design is 'Binary_case'.
+Binary_case
+current_design Binary_Case
+Error: Can't find design 'Binary_Case'. (UID-109)
+Current design is 'Binary_case'.
+{Binary_case}
+compile -exact_map
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Binary_case'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'Binary_case' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'Binary_case'
+  Mapping 'Binary_case'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+    0:00:04    6696.0      0.00       0.0       0.0                          
+Loading db file '/u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_cell
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : cell
+Design : Binary_case
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:11:49 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U14                       NOR2X1          osu05_stdcells  216.000000
+U15                       INVX1           osu05_stdcells  144.000000
+U16                       XOR2X1          osu05_stdcells  504.000000
+U17                       AOI21X1         osu05_stdcells  288.000000
+U18                       INVX1           osu05_stdcells  144.000000
+U19                       NOR2X1          osu05_stdcells  216.000000
+U20                       INVX1           osu05_stdcells  144.000000
+U21                       AND2X1          osu05_stdcells  288.000000
+state_reg[0]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[1]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[2]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 11 cells                                            6696.000000
+1
+report_area
+ 
+****************************************
+Report : area
+Design : Binary_case
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:11:49 2021
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    osu05_stdcells (File: /u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db)
+
+Number of ports:                            4
+Number of nets:                            17
+Number of cells:                           15
+Number of combinational cells:              8
+Number of sequential cells:                 3
+Number of macros/black boxes:               0
+Number of buf/inv:                          3
+Number of references:                       6
+
+Combinational area:               1944.000000
+Buf/Inv area:                      432.000000
+Noncombinational area:            4752.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  6696.000000
+Total area:                 undefined
+1
+report_power
+Loading db file '/u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Binary_case
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:11:49 2021
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  = 554.4012 uW   (89%)
+  Net Switching Power  =  70.3512 uW   (11%)
+                         ---------
+Total Dynamic Power    = 624.7524 uW  (100%)
+
+Cell Leakage Power     =   2.1604 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.4953        2.7571e-02            1.5989            0.5229  (  83.69%)
+combinational  5.9120e-02        4.2780e-02            0.5614            0.1019  (  16.31%)
+--------------------------------------------------------------------------------------------------
+Total              0.5544 mW     7.0351e-02 mW         2.1604 nW         0.6248 mW
+1
+write -format Verilog -hierarchy -output Binary_Case.netlist
+Writing verilog file '/home/shnebli/common/Desktop/Karem/problem2/binary/Binary_Case.netlist'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+link
+
+  Linking design 'Binary_case'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  Binary_case                 /u/shnebli/Desktop/Karem/problem2/binary/Binary_case.db
+  osu05_stdcells (library)    /u/shnebli/Desktop/Karem/problem2/binary/osu05_stdcells.db
+
+1
+quit
+
+Memory usage for this session 67 Mbytes.
+Memory usage for this session including child processes 67 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 5 seconds ( 0.00 hours ).
+
+Thank you...
+
+Script done on Sat 13 Nov 2021 08:11:49 PM PST

@@ -1,0 +1,31 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : Q-2019.12-SP3
+// Date      : Sat Nov 13 20:11:49 2021
+/////////////////////////////////////////////////////////////
+
+
+module Binary_case ( clk, reset, y );
+  output [1:0] y;
+  input clk, reset;
+  wire   n8, n9, n10, n11;
+  wire   [2:0] state;
+  wire   [2:0] nextstate;
+  assign y[1] = 1'b0;
+
+  DFFSR \state_reg[0]  ( .D(nextstate[0]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[0]) );
+  DFFSR \state_reg[2]  ( .D(nextstate[2]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[2]) );
+  DFFSR \state_reg[1]  ( .D(nextstate[1]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[1]) );
+  NOR2X1 U14 ( .A(n8), .B(n9), .Y(nextstate[2]) );
+  INVX1 U15 ( .A(y[0]), .Y(n9) );
+  XOR2X1 U16 ( .A(state[0]), .B(n10), .Y(y[0]) );
+  AOI21X1 U17 ( .A(state[0]), .B(state[1]), .C(n11), .Y(nextstate[1]) );
+  INVX1 U18 ( .A(state[2]), .Y(n11) );
+  NOR2X1 U19 ( .A(n8), .B(n10), .Y(nextstate[0]) );
+  INVX1 U20 ( .A(state[1]), .Y(n10) );
+  AND2X1 U21 ( .A(state[2]), .B(state[0]), .Y(n8) );
+endmodule
+
