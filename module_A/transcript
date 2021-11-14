@@ -1,0 +1,47 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project Problem2_Project3
+vsim work.Binary_case_TB
+# vsim work.Binary_case_TB 
+# Start time: 23:38:18 on Nov 13,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.Binary_case_TB(fast)
+vsim -voptargs=+acc work.Binary_case_TB
+# End time: 23:38:30 on Nov 13,2021, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.Binary_case_TB 
+# Start time: 23:38:30 on Nov 13,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "Binary_case(fast)".
+# Loading sv_std.std
+# Loading work.Binary_case_TB(fast)
+# Loading work.Binary_case(fast)
+step
+step
+step
+step
+step
+step
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.Binary_case_TB(fast)
+# Loading work.Binary_case(fast)
+run
+# ** Note: $finish    : N:/ECE581_HW3/Problem2/Binary_Case_TB.sv(32)
+#    Time: 58 ns  Iteration: 0  Instance: /Binary_case_TB
+# 1
+# Break in Module Binary_case_TB at N:/ECE581_HW3/Problem2/Binary_Case_TB.sv line 32
