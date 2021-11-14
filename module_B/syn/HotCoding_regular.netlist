@@ -1,0 +1,65 @@
+/////////////////////////////////////////////////////////////
+// Created by: Synopsys DC Expert(TM) in wire load mode
+// Version   : Q-2019.12-SP3
+// Date      : Sat Nov 13 20:08:50 2021
+/////////////////////////////////////////////////////////////
+
+
+module HotCoding_regular ( clk, reset, y );
+  output [1:0] y;
+  input clk, reset;
+  wire   N95, n37, n38, n39, n40, n41, n42, n43, n44, n45, n46, n47, n48, n49,
+         n50, n51, n52, n53, n54, n55, n56, n57, n58, n59, n60;
+  wire   [7:0] state;
+  wire   [6:0] nextstate;
+  assign y[1] = 1'b0;
+  assign y[0] = N95;
+
+  DFFSR \state_reg[0]  ( .D(nextstate[0]), .CLK(clk), .R(1'b1), .S(reset), .Q(
+        state[0]) );
+  DFFSR \state_reg[6]  ( .D(nextstate[6]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[6]) );
+  DFFSR \state_reg[2]  ( .D(nextstate[2]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[2]) );
+  DFFSR \state_reg[3]  ( .D(nextstate[3]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[3]) );
+  DFFSR \state_reg[4]  ( .D(nextstate[4]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[4]) );
+  DFFSR \state_reg[5]  ( .D(nextstate[5]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[5]) );
+  DFFSR \state_reg[1]  ( .D(nextstate[1]), .CLK(clk), .R(reset), .S(1'b1), .Q(
+        state[1]) );
+  INVX1 U48 ( .A(n37), .Y(nextstate[6]) );
+  INVX1 U49 ( .A(n38), .Y(nextstate[5]) );
+  INVX1 U50 ( .A(n39), .Y(nextstate[4]) );
+  INVX1 U51 ( .A(n40), .Y(nextstate[3]) );
+  INVX1 U52 ( .A(n41), .Y(nextstate[2]) );
+  INVX1 U53 ( .A(n42), .Y(nextstate[1]) );
+  NOR2X1 U54 ( .A(n43), .B(n44), .Y(nextstate[0]) );
+  NAND3X1 U55 ( .A(n41), .B(n40), .C(n42), .Y(n44) );
+  NAND3X1 U56 ( .A(n45), .B(n46), .C(state[2]), .Y(n42) );
+  NAND3X1 U57 ( .A(n47), .B(n48), .C(state[6]), .Y(n40) );
+  NAND3X1 U58 ( .A(n45), .B(n49), .C(state[5]), .Y(n41) );
+  INVX1 U59 ( .A(n50), .Y(n45) );
+  NAND3X1 U60 ( .A(n51), .B(n52), .C(n48), .Y(n50) );
+  INVX1 U61 ( .A(N95), .Y(n48) );
+  NAND3X1 U62 ( .A(n38), .B(n37), .C(n39), .Y(n43) );
+  NAND3X1 U63 ( .A(n53), .B(n54), .C(state[0]), .Y(n39) );
+  NAND3X1 U64 ( .A(state[4]), .B(n47), .C(n55), .Y(n37) );
+  NOR2X1 U65 ( .A(state[0]), .B(n56), .Y(n55) );
+  NAND2X1 U66 ( .A(n54), .B(n52), .Y(n56) );
+  NAND3X1 U67 ( .A(n53), .B(n57), .C(state[3]), .Y(n38) );
+  INVX1 U68 ( .A(n58), .Y(n53) );
+  NAND3X1 U69 ( .A(n59), .B(n52), .C(n47), .Y(n58) );
+  INVX1 U70 ( .A(n60), .Y(n47) );
+  NAND3X1 U71 ( .A(n49), .B(n46), .C(n51), .Y(n60) );
+  INVX1 U72 ( .A(state[1]), .Y(n51) );
+  INVX1 U73 ( .A(state[5]), .Y(n46) );
+  INVX1 U74 ( .A(state[2]), .Y(n49) );
+  INVX1 U75 ( .A(state[6]), .Y(n52) );
+  NAND3X1 U76 ( .A(n54), .B(n59), .C(n57), .Y(N95) );
+  INVX1 U77 ( .A(state[0]), .Y(n57) );
+  INVX1 U78 ( .A(state[4]), .Y(n59) );
+  INVX1 U79 ( .A(state[3]), .Y(n54) );
+endmodule
+
