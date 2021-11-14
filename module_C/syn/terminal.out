@@ -1,0 +1,334 @@
+Script started on Sat 13 Nov 2021 08:07:15 PM PST
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+lappend search_path /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed
+. /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/dw/syn_ver /pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/dw/sim_ver /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed
+set target_library /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db
+/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db
+set link_library [concat "*" $target_library]
+* /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db
+link
+Error: Current design is not defined. (UID-4)
+0
+read_file -format sverilog /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv
+Loading db file '/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Loading sverilog file '/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv
+
+Statistics for case statements in always block at line 11 in file
+	'/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |     auto/no      |
+===============================================
+
+Statistics for case statements in always block at line 28 in file
+	'/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |     auto/no      |
+===============================================
+
+Inferred memory devices in process
+	in routine Reversed_HotCoding line 6 in file
+		'/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.db:Reversed_HotCoding'
+Loaded 1 design.
+Current design is 'Reversed_HotCoding'.
+Reversed_HotCoding
+current_design Reversed_HotCoding
+Current design is 'Reversed_HotCoding'.
+{Reversed_HotCoding}
+compile -exact_map
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Reversed_HotCoding'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'Reversed_HotCoding' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'Reversed_HotCoding'
+  Mapping 'Reversed_HotCoding'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+    0:00:05   16191.0      0.00       0.0       0.0                          
+Loading db file '/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+report_cell
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : cell
+Design : Reversed_HotCoding
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:07:20 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U35                       OAI21X1         osu05_stdcells  207.000000
+U36                       INVX1           osu05_stdcells  144.000000
+U37                       NOR2X1          osu05_stdcells  216.000000
+U38                       NOR2X1          osu05_stdcells  216.000000
+U39                       NAND2X1         osu05_stdcells  216.000000
+U40                       NOR2X1          osu05_stdcells  216.000000
+U41                       NAND2X1         osu05_stdcells  216.000000
+U42                       NAND2X1         osu05_stdcells  216.000000
+U43                       NOR2X1          osu05_stdcells  216.000000
+U44                       NAND2X1         osu05_stdcells  216.000000
+U45                       INVX1           osu05_stdcells  144.000000
+U46                       INVX1           osu05_stdcells  144.000000
+U47                       NAND3X1         osu05_stdcells  324.000000
+U48                       NOR2X1          osu05_stdcells  216.000000
+U49                       INVX1           osu05_stdcells  144.000000
+U50                       INVX1           osu05_stdcells  144.000000
+U51                       NOR2X1          osu05_stdcells  216.000000
+U52                       NAND2X1         osu05_stdcells  216.000000
+U53                       INVX1           osu05_stdcells  144.000000
+U54                       AOI21X1         osu05_stdcells  288.000000
+U55                       NAND3X1         osu05_stdcells  324.000000
+U56                       NOR2X1          osu05_stdcells  216.000000
+U57                       INVX1           osu05_stdcells  144.000000
+U58                       NOR2X1          osu05_stdcells  216.000000
+U59                       INVX1           osu05_stdcells  144.000000
+state_reg[0]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[1]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[2]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[3]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[4]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[5]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+state_reg[6]              DFFSR           osu05_stdcells  1584.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 32 cells                                            16191.000000
+1
+report_area
+ 
+****************************************
+Report : area
+Design : Reversed_HotCoding
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:07:20 2021
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    osu05_stdcells (File: /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db)
+
+Number of ports:                            4
+Number of nets:                            42
+Number of cells:                           40
+Number of combinational cells:             25
+Number of sequential cells:                 7
+Number of macros/black boxes:               0
+Number of buf/inv:                          8
+Number of references:                       7
+
+Combinational area:               5103.000000
+Buf/Inv area:                     1152.000000
+Noncombinational area:           11088.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 16191.000000
+Total area:                 undefined
+1
+report_power
+Loading db file '/u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Reversed_HotCoding
+Version: Q-2019.12-SP3
+Date   : Sat Nov 13 20:07:20 2021
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   1.2614 mW   (81%)
+  Net Switching Power  = 299.5793 uW   (19%)
+                         ---------
+Total Dynamic Power    =   1.5609 mW  (100%)
+
+Cell Leakage Power     =   4.9606 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         1.0539        5.9541e-02            3.7308            1.1134  (  71.33%)
+combinational      0.2075            0.2400            1.2298            0.4475  (  28.67%)
+--------------------------------------------------------------------------------------------------
+Total              1.2614 mW         0.2996 mW         4.9606 nW         1.5609 mW
+1
+write -format Verilog -hierarchy -output Reversed_HotCoding.netlist
+Writing verilog file '/home/shnebli/common/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.netlist'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+link
+
+  Linking design 'Reversed_HotCoding'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  Reversed_HotCoding          /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/Reversed_HotCoding.db
+  osu05_stdcells (library)    /u/shnebli/Desktop/Karem/problem2/Hot_coding_reversed/osu05_stdcells.db
+
+1
+quit
+
+Memory usage for this session 67 Mbytes.
+Memory usage for this session including child processes 67 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 5 seconds ( 0.00 hours ).
+
+Thank you...
+
+Script done on Sat 13 Nov 2021 08:07:20 PM PST
