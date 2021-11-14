@@ -1,6 +1,6 @@
 vsim -voptargs=+acc work.HotCoding_regular_TB
 # End time: 23:40:56 on Nov 13,2021, Elapsed time: 0:02:26
-# Errors: 0, Warnings: 1
+# Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.HotCoding_regular_TB 
 # Start time: 23:40:56 on Nov 13,2021
 # ** Note: (vsim-3812) Design is being optimized...
