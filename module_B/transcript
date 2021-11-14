@@ -1,0 +1,15 @@
+vsim -voptargs=+acc work.HotCoding_regular_TB
+# End time: 23:40:56 on Nov 13,2021, Elapsed time: 0:02:26
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.HotCoding_regular_TB 
+# Start time: 23:40:56 on Nov 13,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "HotCoding_regular(fast)".
+# Loading sv_std.std
+# Loading work.HotCoding_regular_TB(fast)
+# Loading work.HotCoding_regular(fast)
+run
+# ** Note: $finish    : N:/ECE581_HW3/Problem2/HotCoding_regular_TB.sv(32)
+#    Time: 58 ns  Iteration: 0  Instance: /HotCoding_regular_TB
+# 1
+# Break in Module HotCoding_regular_TB at N:/ECE581_HW3/Problem2/HotCoding_regular_TB.sv line 32
